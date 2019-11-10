@@ -9,7 +9,7 @@ export interface Props {
 const Section = ({ variant, ...props }: Props) => (
   <Box
     as="section"
-    {...variant === 'dark' && { bg: 'darkgray', color: 'white' }}
+    {...(variant === 'dark' && { bg: 'darkgray', color: 'white' })}
     {...props}
   />
 );
