@@ -1,8 +1,11 @@
 import React from 'react';
-import { Flex, Heading } from 'rebass';
+import { graphql, StaticQuery } from 'gatsby';
+import { Flex, Heading, Text } from 'rebass';
 import { ThemeConsumer } from 'styled-components';
+import { Instagram } from 'styled-icons/fa-brands';
 import Container from './Container';
 import Section, { Props } from './Section';
+import IconLink from './IconLink';
 
 import aboutSectionBackgroundSrc from '../assets/about-section-background.svg';
 
@@ -26,9 +29,32 @@ const AboutSection = (props: Props) => (
           alignItems="center"
           px={null}
         >
-          <Container flex={1} my={3}>
-            <Heading textAlign={['center', null, 'left']}>
+          <Container flex={1} my={4}>
+            <Heading>
               BEARDS EYE VIEW
+              <StaticQuery
+                query={graphql`
+                  {
+                    site {
+                      siteMetadata {
+                        email
+                        siteInstagramURL
+                      }
+                    }
+                  }
+                `}
+                render={data => (
+                  <>
+                    <Text my={2} fontSize=".8em">
+                      <IconLink
+                        icon={Instagram}
+                        href={data.site.siteMetadata.siteInstagramURL}
+                        title="Instagram"
+                      />
+                    </Text>
+                  </>
+                )}
+              />
             </Heading>
           </Container>
         </Container>

@@ -31,7 +31,7 @@ const theme = {
 Heading.defaultProps = {
   ...Heading.defaultProps,
   as: 'h1',
-  fontSize: '2rem',
+  fontSize: '1rem',
   fontFamily: 'sans',
 };
 
