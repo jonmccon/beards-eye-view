@@ -18,8 +18,6 @@ const ContactSection = (props: Props) => (
             site {
               siteMetadata {
                 email
-                siteBehanceURL
-                siteFacebookURL
                 siteInstagramURL
               }
             }

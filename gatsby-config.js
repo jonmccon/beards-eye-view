@@ -1,12 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: 'Schönherz Design Stúdió',
-    description: 'A Simonyi Károly Szakkollégium kreatív alkotóműhelye.',
-    language: 'hu',
-    email: 'hello@schdesign.hu',
-    siteBehanceURL: 'https://www.behance.net/wearethesds/',
-    siteFacebookURL: 'https://www.facebook.com/schonherzdesignstudio/',
-    siteInstagramURL: 'https://www.instagram.com/schdesign.hu/',
+    title: 'Beards Eye View',
+    description: 'Photography book',
+    language: 'en',
+    email: 'jonmccon@gmail.com',
+    siteInstagramURL: 'https://www.instagram.com/jonmccon/',
   },
   plugins: [
     {
@@ -22,8 +20,8 @@ module.exports = {
       resolve: 'gatsby-plugin-manifest',
       options: {
         /* eslint-disable @typescript-eslint/camelcase */
-        name: 'Schönherz Design Stúdió',
-        short_name: 'schdesign',
+        name: 'Beards Eye View',
+        short_name: 'BEV',
         start_url: '/',
         background_color: '#3d3d3d',
         theme_color: '#f8485e',
@@ -31,6 +29,12 @@ module.exports = {
         icon: 'src/assets/favicon.png',
         legacy: true,
         /* eslint-enable */
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-google-analytics',
+      options: {
+        trackingId: 'UA-151954429-1',
       },
     },
     'gatsby-plugin-remove-serviceworker',
