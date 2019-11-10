@@ -2,7 +2,6 @@ import React from 'react';
 import { Flex, Heading } from 'rebass';
 import { ThemeConsumer } from 'styled-components';
 import Container from './Container';
-import Paragraph from './Paragraph';
 import Section, { Props } from './Section';
 
 import aboutSectionBackgroundSrc from '../assets/about-section-background.svg';
@@ -29,12 +28,8 @@ const AboutSection = (props: Props) => (
         >
           <Container flex={1} my={3}>
             <Heading textAlign={['center', null, 'left']}>
-              Beards Eye View
+              BEARDS EYE VIEW
             </Heading>
-
-            <Paragraph textAlign={['center', null, 'left']}>
-              Film photography from the life of Jonny McConnell
-            </Paragraph>
           </Container>
         </Container>
       </Section>

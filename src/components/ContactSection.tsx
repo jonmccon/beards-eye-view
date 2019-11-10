@@ -10,8 +10,6 @@ import Section, { Props } from './Section';
 const ContactSection = (props: Props) => (
   <Section {...props}>
     <Container as={Text} textAlign="center">
-      <Heading id="contact">Kapcsolat</Heading>
-
       <StaticQuery
         query={graphql`
           {
@@ -25,40 +23,33 @@ const ContactSection = (props: Props) => (
         `}
         render={data => (
           <>
-            <Text my={4} fontSize="2em">
-              <IconLink
-                icon={FacebookSquare}
-                href={data.site.siteMetadata.siteFacebookURL}
-                title="Facebook"
-              />
-
-              <IconLink
-                icon={Instagram}
-                href={data.site.siteMetadata.siteInstagramURL}
-                title="Instagram"
-                mx={4}
-              />
-
-              <IconLink
-                icon={Behance}
-                href={data.site.siteMetadata.siteBehanceURL}
-                title="Behance"
-              />
-            </Text>
-
             <Paragraph pb={2}>
-              Van egy projekted számunkra?
+              Film photography from the life of{' '}
+              <Text
+                as={Link}
+                href="https://www.workbynight.com/"
+                fontWeight="bold"
+              >
+                Jonny McConnell
+              </Text>
               <br />
-              Küldj egy e-mailt a{' '}
+              Say Hullo -{' '}
               <Text
                 as={Link}
                 href={`mailto:${data.site.siteMetadata.email}`}
                 fontWeight="bold"
               >
                 {data.site.siteMetadata.email}
-              </Text>{' '}
-              címre!
+              </Text>
             </Paragraph>
+            <Text my={0} fontSize="1em">
+              <IconLink
+                icon={Instagram}
+                href={data.site.siteMetadata.siteInstagramURL}
+                title="Instagram"
+                mx={4}
+              />
+            </Text>
           </>
         )}
       />
