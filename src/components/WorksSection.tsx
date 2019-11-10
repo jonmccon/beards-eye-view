@@ -1,15 +1,10 @@
 import { graphql, StaticQuery } from 'gatsby';
 import React from 'react';
-import { Heading } from 'rebass';
 import Gallery from './Gallery';
 import Section, { Props } from './Section';
 
 const WorksSection = (props: Props) => (
   <Section {...props}>
-    <Heading id="works" textAlign="center" py={4}>
-      Munkáink
-    </Heading>
-
     <StaticQuery
       query={graphql`
         {
@@ -39,7 +34,8 @@ const WorksSection = (props: Props) => (
             ...node.image.childImageSharp.fluid,
             caption: `${node.title} – ${node.author}`,
           }))}
-          itemsPerRow={[2, 3]}
+          // Number of images to display
+          itemsPerRow={[4, 3]}
         />
       )}
     />

@@ -1,6 +1,6 @@
 const carouselFormatters = {
   getAltText: ({ data, index }: { data: { caption: string }; index: number }) =>
-    data.caption || `${index + 1}. kép`,
+    data.caption || `${index + 1}. picture`,
 
   getNextLabel: ({
     currentIndex,
@@ -8,23 +8,21 @@ const carouselFormatters = {
   }: {
     currentIndex: number;
     views: { [key: string]: any }[];
-  }) => `Mutasd a(z) ${currentIndex + 2}. képet a(z) ${views.length} közül`,
+  }) => `Show me ${currentIndex + 2}. picture of ${views.length} of`,
   getPrevLabel: ({
     currentIndex,
     views,
   }: {
     currentIndex: number;
     views: { [key: string]: any }[];
-  }) => `Mutasd a(z) ${currentIndex}. képet a(z) ${views.length} közül`,
+  }) => `Show me ${currentIndex}. picture of ${views.length} of`,
 
-  getNextTitle: () => 'Következő (jobbra nyíl)',
-  getPrevTitle: () => 'Előző (balra nyíl)',
+  getNextTitle: () => 'Next (right arrow)',
+  getPrevTitle: () => 'Previous (left arrow)',
 
-  getCloseLabel: () => 'Bezárás (esc)',
+  getCloseLabel: () => 'Close (esc)',
   getFullscreenLabel: ({ isFullscreen }: { isFullscreen: boolean }) =>
-    isFullscreen
-      ? 'Kilépés a teljes képernyős nézetből (f)'
-      : 'Teljes képernyőre váltás (f)',
+    isFullscreen ? 'Exit fullscreen (f)' : 'Switch to fullscreen(f)',
 };
 
 export default carouselFormatters;
