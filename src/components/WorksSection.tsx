@@ -32,7 +32,7 @@ const WorksSection = (props: Props) => (
           images={data.allWorksYaml.edges.map(({ node }: any) => ({
             id: node.image.id,
             ...node.image.childImageSharp.fluid,
-            caption: `${node.title}`,
+            caption: `${node.title} – ${node.author}`,
           }))}
           // Number of images to display
           itemsPerRow={[4, 3]}
