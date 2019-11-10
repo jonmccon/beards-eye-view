@@ -1,9 +1,7 @@
 import React from 'react';
-import { Flex, Heading, Text } from 'rebass';
+import { Flex, Heading } from 'rebass';
 import { ThemeConsumer } from 'styled-components';
 import Container from './Container';
-import List from './List';
-import ListItem from './ListItem';
 import Paragraph from './Paragraph';
 import Section, { Props } from './Section';
 
@@ -30,49 +28,13 @@ const AboutSection = (props: Props) => (
           px={null}
         >
           <Container flex={1} my={3}>
-            <Heading textAlign={['center', null, 'left']}>Rólunk</Heading>
+            <Heading textAlign={['center', null, 'left']}>
+              Beards Eye View
+            </Heading>
 
-            <Paragraph>
-              A Schönherz Design Stúdió a Simonyi Károly Szakkollégium kreatív
-              alkotóműhelye.
+            <Paragraph textAlign={['center', null, 'left']}>
+              Film photography from the life of Jonny McConnell
             </Paragraph>
-
-            <Paragraph>
-              Bármilyen designnal, arculattervezéssel kapcsolatos feladattal
-              szívesen foglalkozunk, legyen az egy weboldal, egy plakát vagy
-              akár egy mobilalkalmazás megtervezése.
-            </Paragraph>
-
-            <Paragraph>
-              Keress minket projektmunkákkal, vagy nyerj betekintést a
-              világunkba workshopjaink alkalmával!
-            </Paragraph>
-          </Container>
-
-          <Container
-            as={Text}
-            flex={1}
-            textAlign={['center', null, 'right']}
-            fontSize="1.5rem"
-            lineHeight={3}
-            bg={['red', null, 'unset']}
-            color="white"
-          >
-            <List
-              p={0}
-              css={`
-                text-transform: lowercase;
-                opacity: 0.8;
-                > * {
-                  display: block;
-                }
-              `}
-            >
-              <ListItem>Grafikai tervezés</ListItem>
-              <ListItem>Web design</ListItem>
-              <ListItem>User experience</ListItem>
-              <ListItem>3D</ListItem>
-            </List>
           </Container>
         </Container>
       </Section>

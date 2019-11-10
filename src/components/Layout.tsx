@@ -5,8 +5,6 @@ import { Box, Flex } from 'rebass';
 import smoothscroll from 'smoothscroll-polyfill';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import defaultTheme from '../utils/theme';
-import Footer from './Footer';
-import Header from './Header';
 
 if (typeof window !== 'undefined') {
   smoothscroll.polyfill();
@@ -79,13 +77,9 @@ const Layout = ({ children }: Props) => (
         )}
       />
 
-      <Header />
-
       <Box as="main" flex={1}>
         {children}
       </Box>
-
-      <Footer />
     </Flex>
   </ThemeProvider>
 );
