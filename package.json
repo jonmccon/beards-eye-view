@@ -19,7 +19,8 @@
   "keywords": [
     "seattle",
     "photography",
-    "film"
+    "film",
+    "Beard's Eye View"
   ],
   "dependencies": {
     "@rhysforyou/gatsby-plugin-react-helmet-async": "^0.1.1",
