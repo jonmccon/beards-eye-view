@@ -14,7 +14,6 @@ const AboutSection = (props: Props) => (
     {theme => (
       <Section
         {...props}
-        bg={[null, null, 'red']}
         py={[null, null, 3, 5]}
         css={`
           @media (min-width: ${theme.breakpoints[1]}px) {

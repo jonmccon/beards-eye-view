@@ -34,8 +34,8 @@ const WorksSection = (props: Props) => (
             ...node.image.childImageSharp.fluid,
             caption: `${node.title} – ${node.author}`,
           }))}
-          // Number of images to display
-          itemsPerRow={[4, 3]}
+          // Number of images to display, and ?
+          itemsPerRow={[6, 3]}
         />
       )}
     />
