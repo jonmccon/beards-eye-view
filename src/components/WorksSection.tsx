@@ -35,7 +35,7 @@ const WorksSection = (props: Props) => (
             caption: `${node.title} – ${node.author}`,
           }))}
           // Number of images to display
-          itemsPerRow={[4, 3]}
+          itemsPerRow={[6, 3]}
         />
       )}
     />
