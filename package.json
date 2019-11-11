@@ -2,6 +2,7 @@
   "name": "beards-eye-view",
   "description": "Photo book",
   "version": "1.1.0",
+  "license": "MIT",
   "author": "Jonny McConnell <jonmccon@gmail.com>",
   "repository": "https://github.com/jonmccon/beards-eye-view",
   "scripts": {
